@@ -3,7 +3,7 @@ import { images } from '../../Constants';
 import {AppWrap , MotionWrapper} from "../../Wrapper"
 import { client } from '../../client';
 import './Footer.scss';
-import Testimonial from '../Testimonial/Testimonial';
+
 const Footer = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);

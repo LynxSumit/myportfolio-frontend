@@ -1,6 +1,6 @@
 import React from 'react'
 import {BsGithub , BsInstagram , BsLinkedin  } from "react-icons/bs"
-import { Link } from 'react-router-dom'
+
 
 const SocialMedia = () => {
   return (

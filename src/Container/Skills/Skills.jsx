@@ -23,7 +23,7 @@ const Skills = () => {
   return (
     <>
       <h2 className="head-text">Skills & Experience</h2>
-      <div className="app__skills-container">
+      <div className={experiences.length>0 ? "app__skills-container app__flex" :`app__skills-container `}>
         <motion.div className="app__skills-list">
           {skills.map((skill) => (
             <motion.div
@@ -42,7 +42,7 @@ const Skills = () => {
             </motion.div>
           ))}
         </motion.div>
-        <motion.div className="app__skills-exp">
+      {   <motion.div className="app__skills-exp">
           {console.log("here" + experiences.work)}
           {experiences?.map((experience) => (
             <motion.div className="app__skills-exp-item" key={experience.year}>
@@ -71,7 +71,7 @@ const Skills = () => {
               </motion.div>
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div>}
       </div>
     </>
   );

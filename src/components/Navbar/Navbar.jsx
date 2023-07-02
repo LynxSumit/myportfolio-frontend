@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./Navbar.scss"
 import {easeOut, motion} from "framer-motion"
 import {HiMenuAlt4 , HiX} from "react-icons/hi"
-import { images } from "../../Constants"
+// import { images } from "../../Constants"
 const Navbar = () => {
   const [ toggle  , setToggle] = useState(false)
   return (
@@ -33,7 +33,7 @@ const Navbar = () => {
 <ul>
 {['home' , 'about', 'work', 'skills', 'contact'].map((item)=>(
           <li key={item} >
-          <a href={`#${item}`} onClick={()=> setToggle(false)}>{item}</a>
+          <a href={`#${item}`} onClick={()=> setToggle(false)}  style={{transition : "all .4s ease-in-out"}}>{item}</a>
           </li>
         ))}
 </ul>

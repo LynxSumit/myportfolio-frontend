@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
    
-    <nav className="flex h-24 bg-gray-900 text-white sticky ">
+    <nav className="flex h-24 bg-gray-900 text-white  ">
       <div className="app__navbar-logo">
       <div  className='mx-5 uppercase flex my-2 '>SUMIT</div>
       </div>

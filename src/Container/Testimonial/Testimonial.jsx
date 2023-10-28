@@ -30,22 +30,22 @@ const Testimonial = () => {
     <>
       {testimonials.length > 0 ? (
         <>
-        <h2 className='head-text' style={{marginBottom: "2rem"}}>
+        <h2 className='head-text text-slate-700 bg-slate-300 px-12 rounded-lg' style={{marginBottom: "2rem"}}>
           Testimonials
         </h2>
-          <div className="app__testimonial-item app__flex">
+          <div className="app__testimonial-item app__flex bg-slate-300 shadow-md">
             <img src={urlFor(testimonials[currentIndex].imgurl)} alt={testimonials[currentIndex].name} />
-            <div className="app__testimonial-content">
+            <div className="app__testimonial-content border-l-2 border-slate-600 mx-3">
               <p className="p-text">{testimonials[currentIndex].feedback}</p>
-              <div>
+              <div  className=''>
                 <h4 className="bold-text">{testimonials[currentIndex].name}</h4>
                 <h5 className="p-text">{testimonials[currentIndex].company}</h5>
               </div>
             </div>
           </div>
 
-          <div className="app__testimonial-btns app__flex">
-            <div className="app__flex" onClick={() => handleClick(currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1)}>
+          <div className="app__testimonial-btns app__flex ">
+            <div className="app__flex " onClick={() => handleClick(currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1)}>
               <HiChevronLeft />
             </div>
 

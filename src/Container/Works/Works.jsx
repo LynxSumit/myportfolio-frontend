@@ -32,15 +32,15 @@ const Works = () => {
   };
   return (
     <>
-      <h2 className="head-text">
+      <h2 className="head-text text-slate-700 bg-slate-400 px-10 rounded-lg py-4">
         My Creative <span>Portfolio</span> Section
       </h2>
-      <div className="app__work-filter ">
+      <div className="app__work-filter  ">
         {["WebApp", "React JS", "UI/UX", "All"].map((item, index) => (
           <div
             key={item + index}
             onClick={() => handleWorkFilter(item)}
-            className={`app__work-filter-item app__flex p-text ${
+            className={`app__work-filter-item app__flex bg-slate-300 p-text ${
               activeFilter === item ? "item-active" : ""
             }`}
           >
@@ -54,8 +54,8 @@ const Works = () => {
         className="app__work-portfolio"
       >
         {filterWorks.map((work, index) => (
-          <div className="app__work-item app__flex" key={index}>
-            <div className="app__work-img app__flex">
+          <div className="app__work-item app__flex bg-slate-200" key={index}>
+            <div className="app__work-img app__flex ">
               <img src={urlFor(work.imgUrl)} alt={work.name} />
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
@@ -64,9 +64,9 @@ const Works = () => {
                   ease: "easeInOut",
                   staggerChildren: 0.5,
                 }}
-                className="app__work-hover app__flex"
+                className="app__work-hover app__flex bg-slate-300"
               >
-                <a href={work.projectLink} target="_blank" rel="norefer">
+                <a href={work.projectLink} target="_blank" rel="norefer noreferrer">
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 0.9] }}
@@ -76,7 +76,7 @@ const Works = () => {
                     <AiFillEye />
                   </motion.div>
                 </a>
-                <a href={work.codeLink} target="_blank" rel="norefer">
+                <a href={work.codeLink} target="_blank" rel="norefer noreferrer">
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 0.9] }}
@@ -89,7 +89,7 @@ const Works = () => {
               </motion.div>
             </div>
             <div className="app__work-content app__flex">
-              <h4 className="bold-text">{work.title}</h4>
+              <h4 className="bold-text bg-slate-200 text-slate-800">{work.title}</h4>
               <p className="p-text" style={{ marginTop: 10 }}>
                 {work.description}
               </p>

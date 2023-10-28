@@ -16,15 +16,15 @@ const Skills = () => {
       setSkills(data);
     });
     client.fetch(Expquery).then((data) => {
-      console.log(data);
+      // console.log(data);
       setExperiences(data);
     });
   }, []);
   return (
     <>
-      <h2 className="head-text">Skills & Experience</h2>
-      <div className={experiences.length>0 ? "app__skills-container app__flex" :`app__skills-container `}>
-        <motion.div className="app__skills-list">
+      <h2 className="head-text text-slate-700 bg-slate-400 px-8 rounded-lg py-3 ">Skills & <span >Experience</span></h2>
+      <div className={experiences.length>0 ? "app__skills-container app__flex bg-slate-600" :`app__skills-container `}>
+        <motion.div className="app__skills-list bg-slate-700 px-4 flex flex-wrap justify-center rounded-lg">
           {skills.map((skill) => (
             <motion.div
               whileInView={{ opacity: [0, 1] }}
@@ -38,12 +38,11 @@ const Skills = () => {
               >
                 <img src={urlFor(skill.icon)} alt={skill.name} />
               </div>
-              <p className="p-text">{skill.name}</p>
+              <p className="p-text text-slate-200">{skill.name}</p>
             </motion.div>
           ))}
         </motion.div>
       {   <motion.div className="app__skills-exp">
-          {console.log("here" + experiences.work)}
           {experiences?.map((experience) => (
             <motion.div className="app__skills-exp-item" key={experience.year}>
               <div className="app__skills-exp-year">

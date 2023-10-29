@@ -14,15 +14,16 @@ const About = () => {
   } , [])
   return (
     <>
-     <h2 className='head-text'>Driving Digital <span>Success</span> Through Expert <span>Development</span><br/> And Seamless <span>Functionality</span></h2>
-     <div className='app__profiles'>
+    <div className='bg-slate-400  h-full rounded-lg'>
+     <h2 className=' head-text text-center text-slate-700  px-10'>Driving Digital <span >Success</span> Through Expert <span>Development</span><br/> And Seamless <span>Functionality</span></h2>
+     <div className='app__profiles bg-slate-300 rounded-bottom-pill'>
 
       {abouts.map((about , index)=> (
         <motion.div
         whileInView={{opacity : 1}}
         whileHover={{scale : 1.1}}
         transition={{duration : .3 , type: 'tween'}}
-        className='app__profile-item'
+        className='app__profile-item  rounded-sm'
         key={about.title + index}>
         <img src={urlFor(about.imgUrl)} alt={about.title}/>
         <h2 className='bold-text'>{about.title}</h2>
@@ -31,7 +32,7 @@ const About = () => {
         </motion.div>
         ))}
      </div>
-     
+     </div>
     </>
   )
 }

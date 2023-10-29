@@ -1,15 +1,24 @@
+body::-webkit-scrollbar{
+  display: none;
+}
 .app {
-    background-color: var(--primary-color);
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
     font-family: var(--font-base);
+    // --tw-bg-opacity: 1;
+    color: rgb(203 213 225 / var(--tw-bg-opacity));
   }
  
   
   .app__whitebg {
-    background-color: var(--white-color);
+    --tw-bg-opacity: 1;
+    background-color:rgb(203 213 225 / var(--tw-bg-opacity));
   }
   
   .app__primarybg {
-    background-color: var(--primary-color);
+    --tw-bg-opacity: 1;
+    background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+    color: white;
   }
   
   .app__container {
@@ -48,7 +57,8 @@
   
     p {
       text-transform: uppercase;
-      color: var(--black-color);
+      // color: var(--black-color);
+      color: rgb(203 213 225 / var(--tw-bg-opacity));
     }
   }
   
